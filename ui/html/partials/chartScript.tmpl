@@ -1,0 +1,62 @@
+{{define "chartScript"}}
+<script>
+    var trace1 = {
+        x: {{.Timestamps}},
+    
+        close: {{.Closes}},
+    
+        decreasing: {
+            line: {
+                color: 'red'
+            }
+        },
+    
+        high: {{.Highs}},
+    
+        increasing: {
+            line: {
+                color: 'green'
+            }
+        },
+    
+        line: {
+            color: 'black'
+        },
+    
+        low: {{.Lows}},
+    
+        open: {{.Opens}},
+    
+        type: 'candlestick',
+        xaxis: 'x',
+        yaxis: 'y'
+    };
+
+    var data = [trace1];
+
+    var layout = {
+        dragmode: 'zoom',
+        margin: {
+            r: 10,
+            t: 25,
+            b: 40,
+            l: 60
+        },
+        showlegend: false,
+        xaxis: {
+            autorange: true,
+            rangeslider: {
+                visible: false
+            },
+            title: {
+                text: 'Date'
+            },
+            type: 'date'
+        },
+        yaxis: {
+            autorange: true,
+            type: 'linear'
+        }
+    };
+</script>
+{{end}}

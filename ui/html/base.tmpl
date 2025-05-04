@@ -1,0 +1,23 @@
+{{define "base"}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{template "title" .}} - Candl</title>
+    <link rel='stylesheet' href='/static/css/main.css'>
+    <script src="/static/js/plotly-3.0.1.min.js" charset="utf-8"></script>
+    <script defer src='/static/js/main.js' type='text/javascript'></script>
+</head>
+<body>
+    {{template "header" .}}
+    <main>
+        {{template "main" .}}
+    </main>
+    <footer>
+        &copy; Jeffrey Woods {{.CurrentYear}}
+    </footer>
+    {{template "chartScript" .}}
+</body>
+</html>
+{{end}}
