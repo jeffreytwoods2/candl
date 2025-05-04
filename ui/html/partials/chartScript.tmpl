@@ -37,10 +37,10 @@
     var layout = {
         dragmode: 'zoom',
         margin: {
-            r: 10,
-            t: 25,
+            r: 'auto',
+            t: 0,
             b: 40,
-            l: 60
+            l: 'auto'
         },
         showlegend: false,
         xaxis: {
@@ -58,5 +58,7 @@
             type: 'linear'
         }
     };
+
+    Plotly.newPlot('chart', data, layout);
 </script>
 {{end}}
